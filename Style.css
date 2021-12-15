@@ -1,0 +1,298 @@
+:root{
+    box-sizing: border-box;
+
+   --primary: #ea8e48;
+    --hover-color: #a13f45;
+    --dark: #5b1a30;
+    --light:  #fff;
+    --header-bg: var(--primary);
+
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+*::selection{
+    background: var(--hover-color);
+    color: var(--light);
+}
+html{
+    overflow: auto;
+}
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--dark);
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--dark);
+}
+body{
+    height: 150rem;
+    font-family:"quicksand","verdana",sans-serif;
+    font-size: 1rem;
+}
+header{
+    background: var(--header-bg);
+}
+header #hero img{
+    width: min(17vw, 127px);
+    height: min(17vw, 140px);
+}
+header #menu{
+    font-size: 3rem;
+    color: var(--dark);
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    padding-left: 0.5rem;
+    padding-right: 6.5rem;
+    padding-top: 0rem;
+}
+.menu li{
+    list-style: none;
+}
+.menu li a{
+    display: block;
+    text-decoration: none;
+    color: var(--dark);
+    padding: 1em 0.5em ;
+    font-size: 1rem ;
+}
+/* styling submenu */
+.has-dropdown{
+    position: relative;
+}
+.submenu{
+    position: absolute;
+    left: 0;
+    background-color: var(--primary) ;
+    white-space: nowrap;
+    padding: 1.5em 0;
+    min-width: 15.8em;
+    /*cacher submenus*/
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top center;
+}
+.submenu > li > a{
+    padding: 0.8em 1.5em;
+}
+.submenu .submenu{
+    left: -100%;
+    top: 0;
+}
+.submenu .submenu .submenu{
+    left: -100%;
+    top: 0;
+}
+.menu > li:hover> a, .submenu > li:hover > a{
+    background-color: hsla(25,82%,69%,0.8);
+    color: var(--hover-color);
+}
+.menu > li:hover > a{
+    background-color: #f1a76f;
+}
+/* Arrows */
+.arrow{
+    width: 0.5em;
+    height: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: 0.15em solid currentColor;
+    border-bottom: 0.15em solid currentColor;
+    transform: rotate(-45deg);
+    margin-top: -0.25em;
+    transition: transform 100ms ease-in-out;
+}
+/* Révéler submenus*/
+.menu > li:hover > a + .submenu,.submenu > li:hover > a + .submenu{
+    opacity: 1;
+    transform: scaleY(1);
+}
+/* ANIMATE arrows */
+.menu > li:hover > a > .arrow, .submenu > li:hover > a > .arrow{
+    transform: rotate(225deg);
+}
+@media only screen and (max-width: 78.75em){
+    .submenu .submenu{
+    left: 100%;
+    top: 0.5em;
+    }
+}
+@media only screen and (max-width: 58.75em){
+    .menu li a{
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 50em){
+    header{
+        position: relative;
+        padding: 0.7em 1em;
+    }
+    .menu{
+        flex-flow: column;
+        position: absolute;
+        background: var(--light);
+        top: 4.55em;
+        left:  0;
+        right: 0;
+        height: 100vh;
+    }
+    .menu > li > a{
+        font-size: 1.5rem;
+        color: var(--dark);
+    }
+    .submenu > li > a{
+        font-size: 1.5rem;
+    }
+    .submenu{
+        top: 0;
+        padding-left: 1.5em;
+        border-left: 0.12em solid hsla(0,42%,40%,1.0);
+        border-bottom: 0.12em solid hsla(0,42%,40%,1.0);
+    }
+    .submenu .submenu{
+        left: 0;
+        top: 0;
+    }
+    .menu > li:hover > a + .submenu, .submenu > li:hover > a + .submenu{
+        position: relative;
+    } 
+    .hamburger{
+        width: 2em;
+        height: 0.25em;
+        display: block;
+    }}
+section h1{
+     display: flex;
+    justify-content:center;
+    padding: 30px 30px;
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background:  no-repeat ;
+    background-size:cover;
+   background-position: center;
+     margin:10px 40px;
+        
+}
+.img{
+    border: rgb(209, 157, 93) outset;
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px 1px rgb(209, 157, 93);
+    background-size: 40%;
+}
+#line {
+    width:50% ;
+    height: 2px;
+    background-color: rgb(207, 138, 54);
+    margin: -2px auto;
+}
+footer{
+    display: flex;
+    border: 3px outset rgb(207, 138, 54)  ;
+    margin: 30px auto;
+   justify-content:center;
+   background-color: rgb(90, 29, 29);
+   border-radius: 10px;
+   
+  
+}
+.div1{
+float: left;
+margin:auto 30px;
+padding-right: 30px;
+}
+footer div a{
+display:flex;
+justify-content:center;  
+border: 1px rgb(209, 157, 93) groove;
+border-radius: 10px;
+color: rgb(224, 212, 212);
+box-shadow: 5px 5px 3px 1px rgb(209, 157, 93) ;
+padding: 10px auto ;
+  }
+.div2{
+   float: right; 
+  margin: 0 30px;
+  padding-left: 30px;
+  }
+ #line1{
+ border-left: 2px solid rgb(209, 157, 93);
+ height:200px;
+ margin-top: 30px;
+ margin-left: 3px;
+ left: 50%;
+top: 20px;}
+footer h4{
+  margin-left: 30px;  
+  margin-top: 100px;
+  padding-bottom: 3px;
+  font-size: 0.8em;
+ color: rgb(206, 183, 183);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+footer h3{
+   font-size: 1.5em; 
+   padding-top: 30px ;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: bold ;
+   font-style: italic;
+    text-decoration: underline ;
+    color: rgb(231, 116, 21);
+    margin-bottom: 0px;
+}
+footer ul{
+color: rgb(231, 212, 212);
+}
+h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-weight: bold ;
+ font-style: oblique;
+  text-decoration: underline ;
+  font-size:1.5em;
+ color: rgb(231, 116, 21);
+  margin-left: 30px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  
+ }
+  section h3 {
+     margin-left: 50px;
+     margin-bottom: 10px;
+     color: rgb(102, 35, 35);
+     font-weight: bold;
+     font-style: oblique;
+ }
+ section ul {
+   margin-left: 50px;  
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  section a{
+    border: 3px rgb(209, 157, 93) solid ;
+    background-color: rgb(226, 115, 10);
+    border-radius: 4px;  
+    color: #5b1a30; 
+    margin-left: 10px;
+   margin-bottom: 10px;
+   }
+ footer h4 a {
+color: #ea8e48;}
+
+
+
+ 
