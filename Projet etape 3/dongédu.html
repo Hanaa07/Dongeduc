@@ -10,17 +10,19 @@
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <a href="https://storyset.com/education"></a>
+
 
     <link rel="stylesheet" href="edustyle.css">
     <link rel="stylesheet" href="Style.css">
 
 </head>
-<body> 
+<body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
-<script src="eduscript.js"></script>
-  
+<script src="eduscript.js"></script>   
+
 <!-- header section debute  -->
 <header>
     <div id="hbrg" class="fas fa-bars"></div>
@@ -253,10 +255,10 @@
 <div class="login-form">
     <form action="">
         <h3>Identifiez-vous</h3>
-        <input type="email" placeholder="Nom d'utilisateur" class="box">
-        <input type="password" placeholder="Mot de passe" class="box">   
+        <input type="email" placeholder="Nom d'utilisateur" class="box" onchange="validateEmail(email)" required>
+        <input type="password" placeholder="Mot de passe" class="box" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Doit contenir au moins un chiffre et une lettre majuscule et une lettre miniscule, et au moins 8 caractères ou plus" required>   
         <p>Vous avez oublié votre mot de passe? <a href="#">cliquez ici</a></p>
-        <p>Vous n'avez pas de compte? <a href="#">Créez le maintenant</a></p>
+        <p>Vous n'avez pas de compte? <a href="C">Créez le maintenant</a></p>
         <input type="submit" class="btn" value="login">
         <i class="fas fa-times"></i>
     </form>
@@ -270,7 +272,6 @@
     <p>Notre site est créé pour vous assister le long de votre cursus.</p>
     <a href="#"><button class="btn">Commencer</button></a>
 
-    <div class="shape"></div>
 
 </section>
 
@@ -279,11 +280,11 @@
 <!-- Qui sommes nous? section debute  -->
 
 <section class="prof" id="prof" align="center">
-    <h1 class="heading" id="Q">Qui sommes nous?</h1>
-    <div class="image">
-    <img src="prof.jpeg" alt="professeur" style="width: 300px; height: 320px;" border="0">
-    </div>
+<div class="image">
+    <img src="teacher-pana.svg" alt="info">
+</div>
     <div class="content">
+    <h3 id="Q">Qui sommes nous?</h3>
     <p>Informations et présentation du professeur</p>    
     <a href="#"><button class="btn">En savoir plus</button></a>
     </div>
@@ -293,13 +294,16 @@
 
 <!-- A propos section debute  -->
 
-<section class="infos" id="infos" align="center">
-<div>
-<h1 class="heading">A propos</u></font></h1></legend>
-<h3>Objectifs</h3> 
-<p>nos objectifs pour la création du site</p>
-<h3>Caractéristiques</h3>
-<p>les caractéristiques du site</p>
+<section class="infos" id="infos">
+<div class="image">
+    <img src="studying-pana.svg" alt="info">
+</div>
+<div class="content">
+    <h3>Pourquoi nous choisir?</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aperiam quaerat dolor voluptas nobis voluptates illum? Inventore voluptas dolore voluptates.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex delectus ducimus dignissimos pariatur. Amet sed distinctio earum dolorum nulla, in obcaecati aliquid modi quos magni ducimus culpa nobis laudantium incidunt.</p>
+    <a href="#"><button class="btn">learn more</button></a>
+
 </div>   
 </section>
 
@@ -308,18 +312,23 @@
 <!-- contact section debute  -->
 
 <section class="contact" id="contact">
-    <form action="">
-            <h1 class="heading" id='C'>Contactez nous</h1>
-        <input type="text" placeholder="Nom Complet" class="box">
-        <input type="email" placeholder="votre email" class="box">
-        <input type="password" placeholder="votre mot de passe" class="box">
-        <input type="number" placeholder="votre numéro de téléphone" class="box">
-        <textarea name="" id="" cols="30" rows="10" class="box address" placeholder="votre adresse"></textarea>
+    
+<h1 class="heading" id='C'>Inscrivez nous</h1>
+<div class="row">
+    <form action="post">
+        <input type="text" placeholder="Nom Complet" class="box" onchange="nomValidate()" required>
+        <input type="email" placeholder="votre email" class="box" onchange="validateEmail" required>
+        <input type="password" placeholder="votre mot de passe" class="box" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Doit contenir au moins un chiffre et une lettre majuscule et une lettre miniscule, et au moins 8 caractères ou plus" required>
+        <input type="text" name="n" id="n" placeholder="votre numéro de téléphone" class="box" onchange="numberValidate()" required>
+        <textarea class="box address" placeholder="votre adresse" pattern=",#-/ !@$%^*(){}|[]\\" pattern="Doit contenir une adresse valide" required></textarea>
         <input type="submit" class="btn" value="Envoyer">
+        <input type="reset" class="btn" value="Réinitialiser">
     </form>
+
     <div class="image">
-        <img src="" alt="">
+    <img src="Contact us-pana.svg" alt="contact">
     </div>
+</div>
 </section>
 
 <!-- contact section finit -->
@@ -337,13 +346,13 @@
        <div id="line1"></div>
         <div class="div2">
         <h3 id="c">  Contact info:</h3> <br>
-        <ul>
-            <li> Casablanca, Maroc 40000.  </li><br>
-            <li>  example@gmail.com</li> <br>
-            <li> 06 34 45 75 09 </li> <br></ul></div>
+            <p><i class="fas fa-map-marker-alt">Casablanca, Maroc 40000.</i></p><br>
+            <p><i class="fas fa-envelope"> example@gmail.com</i>  </p><br>
+            <p><i class="fas fa-phone">06 81 22 42 48 </i></p><br></div>
          <div id="line1"></div>
         <h4 class="credit">créé par <a href="#">&#169 Hanaâ et Ibtissam</a> <br> 
-                          tous droits réservés. </h4>                 
+                          tous droits réservés. </h4>
+                           
 </footer>
 <!-- footer section finit -->
 </body>
