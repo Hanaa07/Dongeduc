@@ -329,6 +329,7 @@ header #menu{
 }
 .contact{
     background: #5a1d1d;
+    margin-bottom :20px;
 }
 .contact .heading{
     color: var(--primary);
