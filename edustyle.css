@@ -385,61 +385,6 @@ section{
     padding: 1rem 7%;
     padding-top: 6rem;
 }
-.footer {
-    background:rgb(90, 29, 29) ;
-    line-height:.5rem ;
-}
- .footer .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
- }
-.footer .box-container .box{
-margin:.5rem;
-text-align: center;
-flex: 1 1 25rem ;
-}
-.footer .box-container .box h3{
-font-size: 2.3rem;
-color: rgb(231, 116, 21);
-padding: .1rem 0;
-}
-.footer .box-container .box p{
-    font-size: 1.5rem;
-    color: #eee;
-    padding: .3rem 0;
-    }
-    .footer .box-container .box p i{
-  padding-right: 1.8rem;
-  color: rgb(228, 154, 17);
-    }  
-    .footer .box-container .box a{
-        font-size: 1.5rem;
-        display: block;
-        padding: 1rem 0;
-        color: #eee;
-    }
-    .footer .box-container .box a i{
-        color: rgb(228, 154, 17);
-        font-size: 2rem;
-    }
-    .footer .box-container .box a:hover{
-  text-decoration:underline ;
-    }
-
- .footer .credit{
-     padding:2rem 1rem ;
-     font-size: 1.2rem;
-     color: #fff;
-     background-color: #a13f45 ;
-     text-align: center;
-     font-weight: normal;
- }
- .footer .credit a{
- color: var(--primary);
- }
-
-
 @media only screen and (max-width: 78.75em){
     .submenu .submenu{
     left: 100%;
@@ -506,4 +451,57 @@ padding: .1rem 0;
     .menu > li:hover > a + .submenu, .submenu > li:hover > a + .submenu{
         position: relative;
     } 
-    
+    .footer {
+    background:rgb(90, 29, 29) ;
+    line-height:.5rem ;
+}
+ .footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+ }
+.footer .box-container .box{
+margin:.5rem;
+text-align: center;
+flex: 1 1 25rem ;
+}
+.footer .box-container .box h3{
+font-size: 2.3rem;
+color: rgb(231, 116, 21);
+padding: .1rem 0;
+}
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    color: #eee;
+    padding: .3rem 0;
+    }
+    .footer .box-container .box p i{
+  padding-right: 1.8rem;
+  color: rgb(228, 154, 17);
+    }  
+    .footer .box-container .box a{
+        font-size: 1.5rem;
+        display: block;
+        padding: 1rem 0;
+        color: #eee;
+    }
+    .footer .box-container .box a i{
+        color: rgb(228, 154, 17);
+        font-size: 2rem;
+    }
+    .footer .box-container .box a:hover{
+  text-decoration:underline ;
+    }
+
+ .footer .credit{
+     padding:2rem 1rem ;
+     font-size: 1.2rem;
+     color: #fff;
+     background-color: #a13f45 ;
+     text-align: center;
+     font-weight: normal;
+ }
+ .footer .credit a{
+ color: var(--primary);
+ }
+
