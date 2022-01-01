@@ -454,6 +454,7 @@ section{
     .footer {
     background:rgb(90, 29, 29) ;
     line-height:.5rem ;
+     margin :20px;
 }
  .footer .box-container{
     display: flex;
