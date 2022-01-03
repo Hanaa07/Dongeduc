@@ -452,6 +452,7 @@ section{
     .menu > li:hover > a + .submenu, .submenu > li:hover > a + .submenu{
         position: relative;
     } 
+}
     .footer {
     background:rgb(90, 29, 29) ;
     line-height:.5rem ;
