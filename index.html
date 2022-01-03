@@ -312,7 +312,7 @@
     
 <h1 class="heading" id='C'>Inscrivez Vous</h1>
 <div class="row">
-    <form action="post">
+    <form method="GET" action="validation.html" onsubmit = "return validateForm()">
         <input type="text" placeholder="Nom Complet" class="box" onchange="nomValidate()" required>
         <input type="email" placeholder="votre email" class="box" onchange="validateEmail" required>
         <input type="password" placeholder="votre mot de passe" class="box" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Doit contenir au moins un chiffre et une lettre majuscule et une lettre miniscule, et au moins 8 caractères ou plus" required>
