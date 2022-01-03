@@ -50,4 +50,12 @@ document.form.n.focus();
 return false;
 }
 }
+function validateForm(){
+if (!requiredElement()){
+return false;
+}
+else{
+confirm("Toutes les données sont validées ! Voulez-vous les envoyer au serveur?");
+}
+}
 });
