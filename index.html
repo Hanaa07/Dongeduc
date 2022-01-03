@@ -252,13 +252,13 @@
 <!-- header section finit -->
 
 <!-- login form  -->
-<div class="login-form" href="#C">
+<div class="login-form">
     <form action="">
         <h3>Identifiez-vous</h3>
         <input type="email" placeholder="Nom d'utilisateur" class="box" onchange="validateEmail(email)" required>
         <input type="password" placeholder="Mot de passe" class="box" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Doit contenir au moins un chiffre et une lettre majuscule et une lettre miniscule, et au moins 8 caractères ou plus" required>   
         <p>Vous avez oublié votre mot de passe? <a href="#">cliquez ici</a></p>
-        <p>Vous n'avez pas de compte? <a href="C">Créez le maintenant</a></p>
+        <p>Vous n'avez pas de compte? <a href="#C">Créez le maintenant</a></p>
         <input type="submit" class="btn" value="login">
         <i class="fas fa-times"></i>
     </form>
