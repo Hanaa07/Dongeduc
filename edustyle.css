@@ -427,7 +427,7 @@ section{
         flex-flow: column;
         position: absolute;
         background: var(--light);
-        top: 4.55em;
+        top: 6em;
         left:  0;
         right: 0;
         height: 100vh;
