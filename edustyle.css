@@ -409,7 +409,7 @@ section{
     }
     header{
         position: relative;
-        padding: 1.5em 2em;
+        padding: 1.5em 1.5em;
     }
     header #hbrg{
         display: block;
