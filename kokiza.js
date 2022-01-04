@@ -3,6 +3,7 @@ const cookieButton=document.querySelector(".cookie-btn");
 cookieButton.addEventListener("click",() => {
     cookieContainer.classList.remove("active"); 
     localStorage.setItem("dongeduc","true");
+    document.cookie="Dongeduc=true ; path=/ ";
  });
 setTimeout(() => {
     if(!localStorage.getItem("dongeduc","true")) {
