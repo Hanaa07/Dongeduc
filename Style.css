@@ -8,19 +8,6 @@
     --header-bg: var(--primary);
 
 }
-#login{
-    font-size: 4rem;
-    color: var(--dark);
-    cursor: pointer;
-    float:right  ;  
-    margin-top:-110px ;
-    margin-right: 15px;
-    padding: 0;
- }
-#login:hover{
-    color: var(--hover-color);
-}
-
 *{
     text-decoration: none;
 }
