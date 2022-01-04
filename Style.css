@@ -342,7 +342,7 @@ padding: .1rem 0;
   max-height: 270px;
   margin: 5px  ;
    }
-   p{
+  .cookie-container >p {
     margin: 24px 0;
     line-height: 2;
 }
