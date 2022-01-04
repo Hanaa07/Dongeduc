@@ -2,10 +2,11 @@ const cookieContainer=document.querySelector(".cookie-container");
 const cookieButton=document.querySelector(".cookie-btn");
 cookieButton.addEventListener("click",() => {
     cookieContainer.classList.remove("active"); 
-    document.cookie="dongeduc=true";
+    localStorage.setItem("dongeduc","true");
  });
 setTimeout(() => {
-    if(!document.cookie=="dongeduc=true") {
+    if(!localStorage.getItem("dongeduc","true")) {
      cookieContainer.classList.add("active");}
    }, 2000);
+ 
  
