@@ -27,13 +27,21 @@ html::-webkit-scrollbar-thumb{
 html::-webkit-scrollbar-thumb{
     background: var(--dark);
 }
-
 header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0.3rem 2%;
     background: var(--header-bg);
 }
 header #hero img{
-    width: min(17vw, 127px);
-    height: min(17vw, 140px);
+    width: min(18.5vw, 100px);
+    height: min(20vw,110px);
 }
 header #menu{
     font-size: 3rem;
@@ -43,6 +51,21 @@ header #menu{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+#login{
+    font-size: 3rem;
+    color: var(--dark);
+    cursor: pointer;
+}
+#login:hover{
+    color: var(--hover-color);
+}
+#hbrg{
+    font-size: 3rem;
+    color: var(--dark);
+    cursor: pointer;
+    display: none;
 }
 .menu{
     display: flex;
@@ -58,8 +81,8 @@ header #menu{
     display: block;
     text-decoration: none;
     color: var(--dark);
-    padding: 1em 0.5em ;
-    font-size: 1rem ;
+    padding: 1em 0.5em;
+    font-size: 1rem;
 }
 /* styling submenu */
 .has-dropdown{
@@ -70,8 +93,8 @@ header #menu{
     left: 0;
     background-color: var(--primary) ;
     white-space: nowrap;
-    padding: 1.5em 0;
-    min-width: 15.8em;
+    padding: 0.9em 0;
+    min-width: 17em;
     /*cacher submenus*/
     opacity: 0;
     transform: scale(0);
@@ -83,12 +106,10 @@ header #menu{
 .submenu .submenu{
     left: -100%;
     top: 0;
-    z-index: 1;
 }
 .submenu .submenu .submenu{
     left: -100%;
     top: 0;
-    z-index: 1;
 }
 .menu > li:hover> a, .submenu > li:hover > a{
     background-color: hsla(25,82%,69%,0.8);
@@ -118,6 +139,7 @@ header #menu{
 .menu > li:hover > a > .arrow, .submenu > li:hover > a > .arrow{
     transform: rotate(225deg);
 }
+
 @media only screen and (max-width: 78.75em){
     .submenu .submenu{
     left: 100%;
